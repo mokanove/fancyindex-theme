@@ -20,8 +20,8 @@ include /etc/nginx/modules-enabled/*.conf;
 > ⚠️ WARN: The alias must be change to a real path, else be fatal.
 ```
 location / {
-    # Have file type question? Add include mime.types; at here maybe can help you.
     alias /var/www/html;
+    include mime.types;
     fancyindex on;
     fancyindex_localtime on;
     fancyindex_exact_size off;
