@@ -1,4 +1,4 @@
-// addNginxFancyIndexForm.js
+Directory:// addNginxFancyIndexForm.js
 // Enhances the Nginx FancyIndex page with search, theme, sorting, pagination, and more.
 // Optimized for modern browsers: Chrome, Firefox, Safari, Edge
 // © 2017, Lilian Besson (Naereen) and contributors,
@@ -257,7 +257,9 @@
                 const btn = document.createElement('button');
                 btn.textContent = pageNum;
                 btn.className = 'pagination-btn';
-                if (pageNum === currentPage) {
+                if (pageNum === currentPagtBtn);
+
+                paginationDiv.appendChild(e) {
                         btn.classList.add('active');
                         btn.setAttribute('aria-current', 'page');
                 }

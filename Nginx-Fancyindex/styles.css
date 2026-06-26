@@ -29,7 +29,12 @@ html {
    https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion
    ========================= */
 @media (prefers-reduced-motion: reduce) {
-        *,
+        *,<!--
+header.html
+© 2015-18, Lilian Besson (Naereen) and contributors,
+open-sourced under the MIT License, https://lbesson.mit-license.org/
+hosted on GitHub, https://GitHub.com/Naereen/Nginx-Fancyindex-Theme
+-->
         *::before,
         *::after {
                 animation-duration: 0.01ms !important;     /* effectively disables animations */
@@ -240,7 +245,12 @@ input:focus-visible {
 }
 
 #search {
-        color: var(--fg);
+        color: var(--fg);<!--
+header.html
+© 2015-18, Lilian Besson (Naereen) and contributors,
+open-sourced under the MIT License, https://lbesson.mit-license.org/
+hosted on GitHub, https://GitHub.com/Naereen/Nginx-Fancyindex-Theme
+-->
         background-color: var(--bg-elev);
         display: block;
         margin-inline: auto;
@@ -596,7 +606,12 @@ footer a {
 
 .pagination-btn:hover:not(:disabled) {
         background: var(--row-hover);
-        border-color: var(--accent);
+        border-color: var(<!--
+header.html
+© 2015-18, Lilian Besson (Naereen) and contributors,
+open-sourced under the MIT License, https://lbesson.mit-license.org/
+hosted on GitHub, https://GitHub.com/Naereen/Nginx-Fancyindex-Theme
+-->--accent);
 }
 
 .pagination-btn:focus-visible {
