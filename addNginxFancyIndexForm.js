@@ -18,7 +18,7 @@
   function createBreadcrumbs() {
     if (!heading) return;
 
-    const pathText = heading.textContent.replace("Directory:", "").trim();
+    const pathText = heading.textContent.replace("Index of", "").trim();
     if (!pathText || pathText === "/") return;
 
     const breadcrumbNav = document.createElement("nav");
