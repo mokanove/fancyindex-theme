@@ -30,9 +30,13 @@ location / {
     fancyindex_ignore "fancyindex-theme";
 }
 ```
-### Advance
+### 💻 Advance
 > Add HEADER.md and FOOTER.md in `/` to add introduce
 
+> To hide the `/` in the up of filename, add nginx config inside location to denied
+```
+fancyindex_show_path off;
+```
 ## ⚖️ LICENSE
 > The source LICENSE was under MIT with Copyright © 2016-17 Lilian Besson [Naereen](https://github.com/Naereen)
 >

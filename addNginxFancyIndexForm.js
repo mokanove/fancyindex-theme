@@ -14,7 +14,6 @@
   const table       = document.querySelector('#list');
   const tbody       = table?.querySelector('tbody');
 
-  // ── Theme state ────────────────────────────────────────────────────────────
   const themeOptions = ['auto', 'light', 'dark'];
   let currentThemeIndex = 0;
 
@@ -33,7 +32,6 @@
     updateThemeButton();
   });
 
-  // ── Breadcrumbs (焊死：只读 h1 文本，不动态插入 nav) ──────────────────────
   function updateBreadcrumbs() {
     if (!heading) return;
 
@@ -42,14 +40,13 @@
 
     const pathText = heading.textContent.replace(/^index of:?/i, '').trim();
 
-    // 找到已有的 <ol class="breadcrumb">，清空后重建内容
     let breadcrumbList = breadcrumbNav.querySelector('.breadcrumb');
     if (!breadcrumbList) {
       breadcrumbList = document.createElement('ol');
       breadcrumbList.className = 'breadcrumb';
       breadcrumbNav.prepend(breadcrumbList);
     }
-    breadcrumbList.innerHTML = '';
+    breadcrumbList.innerHTM
 
     // Root
     const rootLi   = document.createElement('li');
@@ -81,14 +78,11 @@
         breadcrumbList.appendChild(li);
       });
     }
-
-    // h1 テキストをシンプルに
     heading.textContent = 'Index of';
   }
 
   updateBreadcrumbs();
 
-  // ── Copy URL button (焊死：绑定已有按钮) ──────────────────────────────────
   const copyBtn = document.querySelector('.copy-page-url-btn');
   if (copyBtn) {
     copyBtn.addEventListener('click', async () => {
@@ -116,7 +110,6 @@
     });
   }
 
-  // ── Pagination ─────────────────────────────────────────────────────────────
   const listItems    = tbody ? Array.from(tbody.querySelectorAll('tr')) : [];
   let filteredItems  = [...listItems];
   let currentPage    = 1;
@@ -214,7 +207,6 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  // ── Search ─────────────────────────────────────────────────────────────────
   let searchTimeout;
   input.addEventListener('input', function () {
     clearTimeout(searchTimeout);
@@ -247,7 +239,6 @@
     }, 150);
   }, { passive: true });
 
-  // ── Theme management ───────────────────────────────────────────────────────
   function getStoredTheme() {
     try { return localStorage.getItem(THEME_STORAGE_KEY) || 'auto'; }
     catch { return 'auto'; }
@@ -284,7 +275,6 @@
   applyTheme(storedTheme);
   updateThemeButton();
 
-  // ── Keyboard shortcuts ─────────────────────────────────────────────────────
   document.addEventListener('keydown', (event) => {
     const active   = document.activeElement;
     const isTyping = active && (
