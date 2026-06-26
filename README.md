@@ -12,9 +12,13 @@ cd /var/www/html
 # Default Nginx website files path, you can change it if you need
 git clone https://github.com/mokanove/Nginx-Fancyindex-Theme.git fancyindex-theme
 ```
+> In nginx.conf header(Usually in Line 1)
+```
+include /etc/nginx/modules-enabled/*.conf;
+```
 > Nginx config part
 >
-> WARN: The alias must be change to a real path, else be fatal.
+> ⚠️ WARN: The alias must be change to a real path, else be fatal.
 ```
 location / {
     alias /var/www/html;
@@ -26,6 +30,13 @@ location / {
     fancyindex_ignore "fancyindex-theme";
 }
 ```
+> If your fancyindex-theme not in path root
+```
+location /fancyindex-theme/ {
+    alias /var/www/html/fancyindex-theme/;
+}
+```
+> Add this to refer a true path
 
 ## ⚖️ LICENSE
 > The source LICENSE was under MIT with Copyright © 2016-17 Lilian Besson [Naereen](https://github.com/Naereen)
