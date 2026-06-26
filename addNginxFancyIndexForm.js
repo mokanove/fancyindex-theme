@@ -102,7 +102,7 @@
     });
 
     breadcrumbNav.appendChild(copyBtn);
-    heading.textContent = "Directory";
+    heading.textContent = "Index of";
     heading.after(breadcrumbNav);
   }
 
