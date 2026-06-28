@@ -430,7 +430,7 @@ td a {
 #list tbody tr td:first-child a[href$=".c"]::before,
 #list tbody tr td:first-child a[href$=".cpp"]::before,
 #list tbody tr td:first-child a[href$=".h"]::before,
-#list tbody tr td:fNginx-Fancyindexirst-child a[href$=".sh"]::before,
+#list tbody tr td:fnginx-fancyindexirst-child a[href$=".sh"]::before,
 #list tbody tr td:first-child a[href$=".rb"]::before,
 #list tbody tr td:first-child a[href$=".go"]::before,
 #list tbody tr td:first-child a[href$=".rs"]::before,

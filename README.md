@@ -3,12 +3,11 @@ Forked from <https://github.com/Naereen/Nginx-Fancyindex-Theme>
 
 A morden fancyindex-theme with high performance
 ## 🔧 How to use
-> You need Nginx, and a depend (Example using Debian Sid 2026-06-26-08:00)
+> You need Nginx, and a depend (Example using Debian Sid 2026-06-28-08:00)
 ```
 apt update
 apt install nginx libnginx-mod-http-fancyindex
-cd /var/www/html
-# Default Nginx website files path, you can change it if you need
+cd /var/www/html # Default Nginx website files path, you can change it if you need
 git clone https://github.com/mokanove/fancyindex-theme.git
 ```
 > In nginx.conf header(Usually in Line 1)
@@ -31,8 +30,6 @@ location / {
 }
 ```
 ### 💻 Advance
-> Add HEADER.md and FOOTER.md in `/` to add introduce
-
 > To hide the `/` in the up of filename, add nginx config inside location to denied
 ```
 fancyindex_show_path off;
